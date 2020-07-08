@@ -21,7 +21,7 @@ elambda = A*exp(-(lambda-lm).^2/(2*sigma^2)); %Gaussian spectrum of NUS EM radia
 T = 5800; %[K], black body effective temperature of SUN 
 el = 2*pi*h*c^2./((lg*(1e-9)).^5.*(exp(h*c./(lg*(1e-9)*kB*T))-1)); %Emission spectrum of SUN EM radiation
 figure(1)
-R_E = 6370; %[km]
+R_E = 6371; %[km]
 R_ES = 150e6; %[km]
 R_S = 696000; %[km]
 koef = sum(el)*(1e-9)/(5.67*1e-8)/5778^4

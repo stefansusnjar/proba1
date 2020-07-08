@@ -56,7 +56,5 @@ FF = 0.7;
 EQE = 0.85;
 lg = h*c/Eg*1e9;
 u=(lm*(erf(lm/s2)+erf((lg-lm)/s2))+s2/sqrt(pi)*(exp(-(lm/s2)^2)-exp(-((lg-lm)/s2).^2)))./(lg*(1+erf(lm/s2)));
-etaabs=(lm*(erf(lm/s2)+erf((lg-lm)/s2))+s2/sqrt(pi)*(exp(-(lm/s2)^2)-exp(-((lg-lm)/s2).^2)))./(lm*(1+erf(lm/s2))+s2/sqrt(pi)*exp(-(lm/s2)^2));
-IQE = EQE/etaabs;
-PCE1 = FF*EQE*u;
+
 PCE = FF*EQE*(lm*(erf(lm/s2)+1)+s2/sqrt(pi)*(exp(-(lm/s2)^2)))./(lg*(1+erf(lm/s2)))
